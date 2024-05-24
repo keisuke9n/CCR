@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>eGFR & Creatinine Clearance Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>eGFR & Creatinine Clearance Calculator</h1>
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter age">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter weight">
+            </div>
+            <div class="form-group">
+                <label for="creatinine">Creatinine (mg/dL):</label>
+                <input type="number" step="0.01" id="creatinine" placeholder="Enter creatinine level">
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <select id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateResults()">Calculate</button>
+        </form>
+        <div id="results" style="display: none;">
+            <h2>Results</h2>
+            <p id="resultEGFR"></p>
+            <p id="resultCreatinineClearance"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
